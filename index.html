@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   {% for page in site.albums limit:1 %}
-  <a href="{{page.url}}">
+  <a href="{{page.url | prepend: site.baseurl }}">
 
     {% include feature.html display='none' %}
 
@@ -39,7 +39,7 @@ layout: default
 <div class="home-bundle">
 
   {% for page in site.bundles limit:1 %}
-  <a href="{{page.url}}">
+  <a href="{{page.url | prepend: site.baseurl }}">
 
     {% include feature.html %}
 
