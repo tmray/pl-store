@@ -1,2 +1,0 @@
-# pl-store
-Store Protoype
