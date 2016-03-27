@@ -2,32 +2,33 @@
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
   $large-screen: em(860) !default;
-  $hero-background-top: #7F99BE;
+  $hero-background-top: $orange;
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: '../public/images/peter-leidy-speaker.png';
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  @include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 3em;
 
   .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em;
+    float: left;
+    display: inline-block;
+    height: 12em;
   }
 
   .hero-inner {
     @include outer-container;
     @include clearfix;
     margin: auto;
-    padding: 3.5em 1em 1em;
+    padding: 3.5em 1em 0em;
     text-align: center;
 
     .hero-copy {
+      float: left;
+      display: inline;
       text-align: center;
 
       h1 {
@@ -47,7 +48,7 @@
 
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 40%;
+          max-width: 60%;
         }
       }
     }
