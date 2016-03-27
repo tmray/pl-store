@@ -10,21 +10,25 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-static-content {
-  color: #9A9A8A;
+  color: #fff;
   padding: 8em 0;
   position: relative;
   z-index: 9;
 }
 
 .parallax-background {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+      ),
+      url("../public/images/p-on-stage.jpg") repeat;
   background-position: top;
   background-size: cover;
   background-color: beige;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
-  top: - $parallax-window-height / 3;
+  top: - $parallax-window-height / 1.6;
   width: 100%;
 }
 
