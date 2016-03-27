@@ -1,7 +1,7 @@
   <div class="card">
     <a href="{{page.url | prepend: site.baseurl }}">
       <div class="card-image">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+        <img src="{{page.img | prepend: site.baseurl }}" alt="">
       </div>
       <div class="card-header">
         {{page.title}}
