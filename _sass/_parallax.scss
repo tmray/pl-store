@@ -37,4 +37,9 @@ $parallax-background-height: $parallax-window-height * 2;
   @include outer-container;
   padding-top: 5em;
   padding-bottom: 5em;
+
+  p {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
