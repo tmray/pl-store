@@ -14,6 +14,15 @@ $parallax-background-height: $parallax-window-height * 2;
   padding: 8em 0;
   position: relative;
   z-index: 9;
+
+  @include media(min-width 320px max-width 480px, 6) {
+     padding-top: 0em !important;
+
+     h3 {
+       @include outer-container(75%);
+       line-height: 44px;
+     }
+   }
 }
 
 .parallax-background {
