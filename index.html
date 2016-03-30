@@ -19,7 +19,7 @@ layout: default
   <h1 class="page-heading">Albums</h1>
 
   <div class="cards">
-    {% for page in site.albums %}
+    {% for page in site.albums offset:1 %}
     {% include cards.html %}
     {% endfor %}
   </div>
