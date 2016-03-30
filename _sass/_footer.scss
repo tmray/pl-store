@@ -34,6 +34,12 @@
     margin-bottom: $base-spacing * 2;
     padding: 0;
   }
+  
+  @include media(min-width 480px max-width 769px) {
+    .footer-links ul {
+      @include flex-basis(13em);
+    }
+  }
 
   li {
     line-height: 1.5em;
@@ -75,4 +81,5 @@
     max-width: 35em;
     text-align: center;
   }
+
 }
