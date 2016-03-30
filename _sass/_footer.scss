@@ -3,7 +3,7 @@
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: $purple;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -34,7 +34,7 @@
     margin-bottom: $base-spacing * 2;
     padding: 0;
   }
-  
+
   @include media(min-width 480px max-width 769px) {
     .footer-links ul {
       @include flex-basis(13em);
