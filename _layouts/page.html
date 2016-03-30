@@ -11,11 +11,11 @@ layout: default
     <div class="player">
       <div class="cashmusic soundplayer playlist"
         data-playlist='{
-          "id":"player1",
-          "artist":"Artist name",
+          "id":"{{page.category}}",
+          "artist":"Peter Leidy",
           "album":"Album title",
           "tracks":[
-            {"id":"unique1","title":"Song title 1","url":"path/to/song1.mp3"},
+            {"id":"unique1","title":"{{page.track1}}","url":"{{site.baseurl}}{{page.stream1}}"},
             {"id":"unique2","title":"Song title 2","url":"path/to/song2.mp3"}
           ]
         }'
