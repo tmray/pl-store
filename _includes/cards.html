@@ -1,14 +1,14 @@
-  <div class="card">
-    <a href="{{page.url | prepend: site.baseurl }}">
+  <div class="card {% if album.url == page.url %}none{% endif %}">
+    <a href="{{album.url | prepend: site.baseurl }}">
       <div class="card-image">
-        <img src="{{page.img | prepend: site.baseurl }}" alt="">
+        <img src="{{album.img | prepend: site.baseurl }}" alt="">
       </div>
       <div class="card-header">
-        {{page.title}}
+        {{album.title}}
       </div>
       <div class="card-copy">
         <p>
-          {{page.summary}}
+          {{album.summary}}
         </p>
       </div>
     </a>

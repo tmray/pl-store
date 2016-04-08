@@ -41,8 +41,11 @@ layout: default
   <h1 class="page-heading">Albums</h1>
 
   <div class="cards">
-    {% for page in site.albums %}
+    {% for album in site.albums %}
+    {% if album.url == page.url = nil %}
+    {% else %}
     {% include cards.html %}
+    {% endif %}
     {% endfor %}
   </div>
 </div>

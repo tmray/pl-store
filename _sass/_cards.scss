@@ -34,7 +34,7 @@
 
   .card-image {
     overflow: hidden;
-    height: 300px;
+    height: 270px;
     max-height: 300px;
     background-color: $card-image-hover-color;
 
@@ -90,3 +90,6 @@ a .side-image {
   text-decoration: none !important;
   color: #333;
 }
+
+// hide card
+// .card.none {display: none;}
