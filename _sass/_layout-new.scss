@@ -1,3 +1,15 @@
+//body
+body {
+  background-color: #ca7c5d !important;
+}
+.page-content {
+  @include outer-container(980px);
+  background-color: #D1D6F3;
+}
+.cm-wrapper {
+  background: url(../public/images/panoramic_fullbg.png);
+  background-size: cover;
+}
 // Home
 .home,
 .home-bundle {
@@ -10,6 +22,9 @@
 .home-albums,
 .other-albums {
   @include outer-container;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   .cards {
     margin-left: -1em;
     margin-right: -1em;

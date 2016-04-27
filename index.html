@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<!-- <div class="home">
 
   {% for page in site.albums limit:1 %}
   <a href="{{page.url | prepend: site.baseurl }}">
@@ -12,14 +12,14 @@ layout: default
   </a>
   {% endfor %}
 
-</div>
+</div> -->
 
 <div class="home-albums">
 
   <h1 class="page-heading">Albums</h1>
 
   <div class="cards">
-    {% for album in site.albums offset:1 %}
+    {% for album in site.albums %}
     {% include cards.html %}
     {% endfor %}
   </div>
