@@ -39,11 +39,14 @@ section {
     @include span-columns(12);
   }
 }
-.player,
-.album-desc {
-  @include span-columns(6 of 12);
-  @include pad(20px);
-  @include media(min-width 320px max-width 480px) {
-    @include span-columns(12);
+// player on album pages
+.album-page {
+  .player,
+  .album-desc {
+    @include span-columns(6 of 12);
+    @include pad(20px);
+    @include media(min-width 320px max-width 480px) {
+      @include span-columns(12);
+    }
   }
 }
