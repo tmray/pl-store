@@ -1,5 +1,5 @@
   <div class="card {% if album.url == page.url %}none{% endif %}">
-    <a href="{{album.url | prepend: site.baseurl }}">
+    <!-- <a href="{{album.url | prepend: site.baseurl }}"> -->
       <div class="card-image">
         <img src="{{album.img | prepend: site.baseurl }}" alt="">
       </div>
@@ -10,6 +10,25 @@
         <p>
           {{album.summary}}
         </p>
+        <p>
+          <div class="player">
+            <div class="cashmusic soundplayer playlist"
+              data-playlist='{
+                "id":"{{album.tag}}",
+                "artist":"Peter Leidy",
+                "album":"{{album.title}}",
+                "tracks":[
+                  {"id":"{{album.tag}}1","title":"{{album.track1}}","url":"{{site.baseurl}}{{album.stream1}}"},
+                  {"id":"{{album.tag}}2","title":"{{album.track2}}","url":"{{site.baseurl}}{{album.stream2}}"}
+                ]
+              }'
+            ></div>
+            <p>
+              <button style="display:{{include.display}}" type="button" name="button">mp3</button>
+              <button style="display:{{include.display}}" type="button" name="button">CD</button>
+            </p>
+          </div>
+        </p>
       </div>
-    </a>
+    <!-- </a> -->
   </div>
