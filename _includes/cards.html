@@ -10,6 +10,7 @@
         <p>
           {{album.summary}}
         </p>
+        {% if album.category == "album" %}
         <p>
           <div class="player">
             <div class="cashmusic soundplayer playlist"
@@ -28,6 +29,8 @@
               <button style="display:{{include.display}}" type="button" name="button">CD</button>
             </p>
           </div>
+          {% else | null %}
+          {% endif %}
         </p>
       </div>
     <!-- </a> -->
