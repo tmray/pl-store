@@ -41,15 +41,3 @@ layout: default
   </div>
   <div id="js-parallax-background" class="parallax-background"></div>
 </div>
-
-<div class="home-bundle">
-
-  {% for page in site.bundles limit:1 %}
-  <a href="{{page.url | prepend: site.baseurl }}">
-
-    {% include feature.html %}
-
-  </a>
-  {% endfor %}
-
-</div>
