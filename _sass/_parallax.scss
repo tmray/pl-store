@@ -5,6 +5,7 @@ $parallax-background-height: $parallax-window-height * 2;
   max-height: $parallax-window-height;
   overflow: hidden;
   position: relative;
+  margin-top: 25px;
   text-align: center;
   width: 100%;
 }
