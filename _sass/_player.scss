@@ -4,3 +4,31 @@ div.cashmusic.soundplayer.playlist.tracklist {
 div.cashmusic.soundplayer.playlist.toggletracklist {
   display: none;
 }
+
+// player seek
+div.cashmusic.soundplayer.playlist.seekbarcontainer {
+    height: 24px;
+    width: 82%;
+    right: -35px;
+    float: left;
+}
+div.cashmusic.soundplayer.playlist.controls {
+    float: left;
+    margin-top: -24px;
+}
+
+div.cashmusic.soundplayer.playlist.position {
+    height: 30px;
+}
+
+div.cashmusic.soundplayer.playlist.seekbar {
+    height: 30px;
+}
+
+div.cashmusic.soundplayer.playlist.prevtrack {
+    display: none;
+}
+
+div.cashmusic.soundplayer.playlist.nexttrack {
+    display: none;
+}
