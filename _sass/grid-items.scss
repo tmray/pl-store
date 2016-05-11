@@ -7,7 +7,7 @@
   $base-background-color: white !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
-  $grid-items-background: $base-background-color;
+  $grid-items-background: #D1D6F3;
   $grid-item-background: desaturate($action-color, 30%);
   $grid-item-colors:
     desaturate($action-color, 30%),
@@ -97,20 +97,20 @@
     }
   }
 
-  .grid-item-image {
-    //background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
-    background-color: $grid-item-background;
-    &.seven-ways {
-      background: lightseagreen;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    &.best-work {
-      background: lightslategray;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
+  // .grid-item-image {
+  //   //background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  //   background-color: $grid-item-background;
+  //   &.seven-ways {
+  //     background: lightseagreen;
+  //     background-position: top;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //   }
+  //   &.best-work {
+  //     background: lightslategray;
+  //     background-position: top;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //   }
+  // }
 }
