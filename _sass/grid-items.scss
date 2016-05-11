@@ -21,7 +21,7 @@
   $grid-item-columns: 6;
   $grid-item-big-columns: 8;
   $grid-item-color: white;
-  $grid-item-height: 20em;
+  $grid-item-height: 55em;
 
   @include clearfix;
 
@@ -37,7 +37,7 @@
     outline: none;
     overflow: hidden;
     padding: 2em;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     width: 100%;
@@ -75,14 +75,32 @@
     margin-bottom: 0.4em;
   }
 
+  .grid-item h2 {
+    color: $grid-item-color;
+  }
+
+  .grid-item h1,
+  .grid-item h2 {
+    text-align: center;
+  }
+
   .grid-item p {
     color: transparentize($grid-item-color, 0.3);
     line-height: 1.5em;
     margin: auto;
 
-    @include media($medium-screen) {
-      max-width: 70%;
-    }
+    // @include media($medium-screen) {
+    //   max-width: 70%;
+    // }
+  }
+
+  .grid-item li {
+    color: $grid-item-color;
+    margin-bottom: 10px;
+  }
+
+  .grid-item a {
+    color: $grid-item-color;
   }
 
   .grid-item-big {
