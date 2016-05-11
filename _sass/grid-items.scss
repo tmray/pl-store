@@ -101,13 +101,13 @@
     //background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
     background-color: $grid-item-background;
     &.seven-ways {
-      background: url("/public/images/dvd-art/7-ways-screenshot.png");
+      background: lightseagreen;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
     }
     &.best-work {
-      background: url("/public/images/dvd-art/best-work-screenshot.png");
+      background: lightslategray;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
