@@ -13,17 +13,28 @@
         {% if album.category == "album" %}
         <p>
           <div class="player">
-            <div class="cashmusic soundplayer playlist"
+            <!-- <div class="cashmusic soundplayer playlist"
               data-playlist='{
                 "id":"{{album.tag}}",
                 "artist":"Peter Leidy",
                 "album":"{{album.title}}",
                 "tracks":[
-                  {"id":"{{album.tag}}1","title":"{{album.track1}}","url":"{{site.baseurl}}{{album.stream1}}"},
-                  {"id":"{{album.tag}}2","title":"{{album.track2}}","url":"{{site.baseurl}}{{album.stream2}}"}
+                  {% for tracks in album.tracks %}
+                  {"id":"{{album.tag [1]}}","title":"{{ album.tracks[forloop.index0] }}","url":"{{site.baseurl}}{{album.stream[forloop.index0]}}"}
+                  {% endfor %}
                 ]
               }'
-            ></div>
+            ></div> -->
+            <p>
+              <ol>
+                {% for tracks in album.tracks %}
+                <li>
+                  {{ album.tracks[forloop.index0] }}
+                </li>
+                {% endfor %}
+
+              </ol>
+            </p>
             <p>
               <button style="display:{{include.display}}" type="button" name="button">Download Album</button>
               <button style="display:{{include.display}}" type="button" name="button">Order CD</button>
