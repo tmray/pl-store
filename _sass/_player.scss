@@ -1,10 +1,17 @@
-div.cashmusic.soundplayer.playlist.tracklist {
-  height: auto !important;
+.cashmusic.soundplayer.playlist {
+  margin-left: -7px;
 }
+
 div.cashmusic.soundplayer.playlist.toggletracklist {
   display: none;
 }
-
+div.cashmusic.soundplayer.playlist.nowplaying,
+div.cashmusic.soundplayer.playlist.playtime {
+  display: none;
+}
+div.cashmusic.soundplayer.playlist.container {
+  margin-bottom: 10px;
+}
 // player seek
 div.cashmusic.soundplayer.playlist.seekbarcontainer {
     height: 24px;
@@ -31,4 +38,9 @@ div.cashmusic.soundplayer.playlist.prevtrack {
 
 div.cashmusic.soundplayer.playlist.nexttrack {
     display: none;
+}
+div.cashmusic.soundplayer.playlist.tracklist {
+  visibility: hidden;
+  padding-top: 0px;
+  height: 0px !important;
 }
