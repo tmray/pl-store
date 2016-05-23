@@ -65,6 +65,12 @@
     p {
       margin: 0 0 ($base-spacing / 2);
     }
+
+    ol {
+      padding-left: 30px;
+      text-indent: 5px;
+    }
+
   }
 
   // &:focus,
