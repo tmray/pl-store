@@ -36,6 +36,9 @@
               </ol>
             </p>
             <p>
+              {% for buy in album.buy %}
+              {{ album.buy[forloop.index0] }}
+              {% endfor %}
               <button style="display:{{include.display}}" type="button" name="button">Download Album</button>
               <button style="display:{{include.display}}" type="button" name="button">Order CD</button>
             </p>
