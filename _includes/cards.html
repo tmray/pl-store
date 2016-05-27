@@ -1,30 +1,16 @@
   <div class="card {% if album.url == page.url %}none{% endif %}">
-    <!-- <a href="{{album.url | prepend: site.baseurl }}"> -->
-      <div class="card-image">
-        <img src="{{album.img | prepend: site.baseurl }}" alt="">
-      </div>
-      <div class="card-header">
-        {{album.title}}
-      </div>
+
       <div class="card-copy">
+        <p>
+          <script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','{{album.cart}}');</script>
+        </p>
         <p>
           {{album.summary}}
         </p>
         {% if album.category == "album" %}
         <p>
           <div class="player">
-            <!-- <div class="cashmusic soundplayer playlist"
-              data-playlist='{
-                "id":"{{album.tag}}",
-                "artist":"Peter Leidy",
-                "album":"{{album.title}}",
-                "tracks":[
-                  {% for tracks in album.tracks %}
-                  {"id":"{{album.tag [1]}}","title":"{{ album.tracks[forloop.index0] }}","url":"{{site.baseurl}}{{album.stream[forloop.index0]}}"}
-                  {% endfor %}
-                ]
-              }'
-            ></div> -->
+
             <p>
               <ol>
                 {% for tracks in album.tracks %}
@@ -35,13 +21,7 @@
 
               </ol>
             </p>
-            <p>
-              {% for buy in album.buy %}
-              {{ album.buy[forloop.index0] }}
-              {% endfor %}
-              <button style="display:{{include.display}}" type="button" name="button">Download Album</button>
-              <button style="display:{{include.display}}" type="button" name="button">Order CD</button>
-            </p>
+
           </div>
           {% else | null %}
           {% endif %}

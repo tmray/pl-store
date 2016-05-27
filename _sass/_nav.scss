@@ -19,7 +19,8 @@ header.navigation {
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
-  background-color: $navigation-background;
+  background-color: $purple;
+  @include background-image(url("http://peterleidy.com/direct-support-professionals/wp-content/themes/dejavu/styles/soft_lights/menu_overlay.png"));
   border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   @include outer-container(980px);

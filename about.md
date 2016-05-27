@@ -1,15 +1,18 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
+Digital Downloads
+=================
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+**Don't want to wait? Need the music now?**
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Well that's exactly what you can do!
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Add the albums you want to your cart, checkout and get them right away.
+
+How about that?
+<script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','9431');</script>
+
+<script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','9432');</script>

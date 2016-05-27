@@ -21,7 +21,8 @@ body {
 }
 .home-albums,
 .other-albums,
-.home-dvd {
+.home-dvd,
+.home-discs {
   @include outer-container;
   padding-top: 15px;
   padding-right: 15px;

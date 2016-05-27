@@ -4,13 +4,39 @@ layout: default
 
 <div class="home-albums">
 
-  <h1 class="page-heading">Albums</h1>
+  <h1 class="page-heading">MP3 Album Downloads</h1>
+
+  <p>
+    <b>Don't want to wait? Need the music now?</b>
+  </p>
+
+  <p>
+    Well that's exactly what you can do! How about that?
+  </p>
 
   <div class="cards">
     {% for album in site.albums %}
     {% include cards.html %}
     {% endfor %}
     {% for album in site.bundles %}
+    {% include cards.html %}
+    {% endfor %}
+  </div>
+
+</div>
+
+<div class="home-discs">
+
+  <h1 class="page-heading">Compact Discs</h1>
+
+  <p>
+    <b>Would you rather have a CD of your own, to have and to hold?</b><br>
+    <br>
+    I'll send it right on over.
+  </p>
+
+  <div class="cards">
+    {% for album in site.cds %}
     {% include cards.html %}
     {% endfor %}
   </div>

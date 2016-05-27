@@ -27,3 +27,6 @@ collections:
 
   bundles:
     output: true
+
+  cds:
+    output: true
