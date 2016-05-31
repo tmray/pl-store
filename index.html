@@ -18,9 +18,6 @@ layout: default
     {% for album in site.albums %}
     {% include cards.html %}
     {% endfor %}
-    {% for album in site.bundles %}
-    {% include cards.html %}
-    {% endfor %}
   </div>
 
 </div>
@@ -50,6 +47,21 @@ layout: default
     <strong>Time for an addition to your training resources library??</strong>
   </p>
   {% include grid-items.html %}
+
+</div>
+
+<div class="home-bundle">
+
+  <h1 class="page-heading">Bundles</h1>
+  <p>
+    <strong>Have you heard about my Special Bundle Deal!?</strong>
+  </p>
+  <p>
+    Sale: Human Services Training Videos & Music
+  </p>
+  {% for album in site.bundles %}
+  {% include cards.html %}
+  {% endfor %}
 
 </div>
 
