@@ -60,19 +60,21 @@ layout: default
     Sale: Human Services Training Videos & Music
   </p>
   <div class="cards">
-    {% for album in site.bundles %}
-    {% include cards.html %}
-    {% endfor %}
 
     <div class="card" style="height: 230px;">
       <div class="card-copy" style="text-align: center;">
 
-        <h1 style="line-height: 1.2em;">Have you heard about my Special Bundle!?</h1>
-        <p>“How do I get these!??” you ask excitedly.</p>
-        <p>It’s easy. Send me money.</p>
+        <h1 style="line-height: 1.2em; color: #4f2614;"><i>Have you heard about my Special Bundle!?</i></h1>
+        <h2>“How do I get these!??” <small>you ask excitedly.</small></h2>
+        <h2>It’s easy. Send me money.</h2>
 
       </div>
     </div>
+
+    {% for album in site.bundles %}
+    {% include cards.html %}
+    {% endfor %}
+
   </div>
 
 </div>

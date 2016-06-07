@@ -1,6 +1,12 @@
 //body
 body {
   background-color: #ca7c5d !important;
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl {
+  font-family: 'Open Sans', sans-serif;
 }
 .page-content {
   @include outer-container(980px);
