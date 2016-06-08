@@ -2,17 +2,31 @@
 layout: default
 ---
 
+<div class="page-header page-title">
+  <h1>Store</h1>
+</div>
+
 <div class="home-albums">
 
-  <h1 class="page-heading">MP3 Album Downloads</h1>
+  <div class="section-header">
 
-  <p>
-    <b>Don't want to wait? Need the music now?</b>
-  </p>
+    <h1 class="page-heading">
+      Digital Downloads: <br>
+      <small>ALBUMs (MP3 format)</small>
+    </h1>
 
-  <p>
-    Well that's exactly what you can do! How about that?
-  </p>
+    <p>
+      <b>Don't want to wait? Need the music now?</b>
+    </p>
+
+    <p>
+      Well that's exactly what you can do! How about that?
+    </p>
+
+    <p>
+      <b><i>** (scroll down to see hard copy options) **</i></b>
+    </p>
+  </div>
 
   <div class="cards">
     {% for album in site.albums %}
@@ -22,7 +36,26 @@ layout: default
 
 </div>
 
-<div class="home-discs">
+<div class="section-header page-title">
+
+  <h1 class="page-heading">
+    Digital Downloads: <br>
+    <small>Video (MOV format)</small>
+  </h1>
+
+  <p>
+    <b><i>** (scroll down to see hard copy options) **</i></b>
+  </p>
+
+</div>
+
+<div class="home-dvd dvd-download">
+
+  {% include grid-items.html %}
+
+</div>
+
+<div class="section-header page-title">
 
   <h1 class="page-heading">Compact Discs</h1>
 
@@ -32,6 +65,11 @@ layout: default
     I'll send it right on over.
   </p>
 
+</div>
+
+<div class="home-discs">
+
+
   <div class="cards">
     {% for album in site.cds %}
     {% include cards.html %}
@@ -40,17 +78,22 @@ layout: default
 
 </div>
 
-<div class="home-dvd">
+<div class="section-header page-title">
 
   <h1 class="page-heading">DVD's</h1>
   <p>
     <strong>Time for an addition to your training resources library??</strong>
   </p>
+
+</div>
+
+<div class="home-dvd">
+
   {% include grid-items.html %}
 
 </div>
 
-<div class="home-bundle">
+<div class="section-header page-title">
 
   <h1 class="page-heading">Bundles</h1>
   <p>
@@ -59,6 +102,11 @@ layout: default
   <p>
     Sale: Human Services Training Videos & Music
   </p>
+
+</div>
+
+<div class="home-bundle">
+
   <div class="cards">
 
     <div class="card" style="height: 230px;">
