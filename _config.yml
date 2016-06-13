@@ -7,10 +7,10 @@
 
 # Site settings
 title: Peter Leidy's Awesome Store!
-email: your-email@domain.com
+email: peterleidy@yahoo.com
 description: CD’s & DVD videos full of humor, music & overall quirkiness. Oh, and really valuable information…
 baseurl: "/pl-store" # the subpath of your site, e.g. /blog
-url: "http://tmray.github.io" # the base hostname & protocol for your site
+url: "http://store.peterleidy.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
