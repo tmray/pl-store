@@ -21,7 +21,7 @@
   $grid-item-columns: 6;
   $grid-item-big-columns: 8;
   $grid-item-color: white;
-  $grid-item-height: 85em;
+  $grid-item-height: 90em;
 
   @include clearfix;
 
@@ -131,4 +131,7 @@
   //     background-size: cover;
   //   }
   // }
+}
+.grid-items .grid-item.dvd-box {
+  height: 55em;
 }
