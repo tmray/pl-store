@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<div class="page-header page-title">
+<div id="album-downloads" class="page-header page-title">
   <h1>Store</h1>
+  {% include subnav.html %}
 </div>
 
 <div class="home-albums">
@@ -11,8 +12,8 @@ layout: default
   <div class="section-header">
 
     <h1 class="page-heading">
-      Digital Downloads: <br>
-      <small>ALBUMs (MP3 format)</small>
+      Album Downloads: <br>
+      <small>(MP3 format)</small>
     </h1>
 
     <p>
@@ -23,32 +24,27 @@ layout: default
       Well that's exactly what you can do! How about that?
     </p>
 
-    <p>
-      <a href="#cds">
-        <b><i>** (click here for CD options) **</i></b>
-      </a>
-    </p>
   </div>
 
   <div class="cards">
     {% for album in site.albums %}
     {% include cards.html %}
     {% endfor %}
+    {% for album in site.bundles limit: 1 offset: 1  %}
+    {% include cards.html %}
+    {% endfor %}
   </div>
 
 </div>
 
-<div class="section-header page-title">
+<div id="video-downloads" class="section-header page-title">
 
   <h1 class="page-heading">
-    Digital Downloads: <br>
-    <small>Video (MOV format)</small>
+    Video Downloads
   </h1>
 
   <p>
-    <a href="#dvds">
-      <b><i>** (click here for DVD options) **</i></b>
-    </a>
+    {% include subnav.html %}
   </p>
 
 </div>
@@ -68,6 +64,9 @@ layout: default
     <br>
     I'll send it right on over.
   </p>
+  <p>
+    {% include subnav.html %}
+  </p>
 
 </div>
 
@@ -76,6 +75,9 @@ layout: default
 
   <div class="cards">
     {% for album in site.cds %}
+    {% include cards.html %}
+    {% endfor %}
+    {% for album in site.bundles limit: 1 %}
     {% include cards.html %}
     {% endfor %}
   </div>
@@ -88,6 +90,9 @@ layout: default
   <p>
     <strong>Time for an addition to your training resources library??</strong>
   </p>
+  <p>
+    {% include subnav.html %}
+  </p>
 
 </div>
 
@@ -97,12 +102,15 @@ layout: default
 
 </div>
 
-<div class="section-header page-title">
+<div id="bundles" class="section-header page-title">
 
   <h1 class="page-heading">Bundles</h1>
 
   <p>
     Sale: Human Services Training Videos & Music
+  </p>
+  <p>
+    {% include subnav.html %}
   </p>
 
 </div>
