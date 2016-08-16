@@ -73,20 +73,20 @@
 
   }
 
-  // &:focus,
-  // &:hover {
-  //   cursor: pointer;
-  //
-  //   img {
-  //     opacity: $card-image-hover-opacity;
-  //   }
-  // }
-
   &:active {
     background-color: $card-background;
 
     .card-header {
       background-color: $card-background;
+    }
+  }
+  
+  // bundle arrow
+  .desktop-arrow {
+    height: 55px;
+
+    @include media(max-width 480px) {
+      @include transform(rotate(90deg));
     }
   }
 }

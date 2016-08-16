@@ -10,7 +10,9 @@ div.cashmusic.soundplayer.playlist.playtime {
   display: none;
 }
 div.cashmusic.soundplayer.playlist.container {
-  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+  margin: 10px 0px;
 }
 // player seek
 div.cashmusic.soundplayer.playlist.seekbarcontainer {
@@ -21,7 +23,12 @@ div.cashmusic.soundplayer.playlist.seekbarcontainer {
 }
 div.cashmusic.soundplayer.playlist.controls {
     float: left;
-    margin-top: -24px;
+    margin-top: 2px;
+    position: absolute;
+    left: -5px;
+}
+div.cashmusic.soundplayer.playlist.playpause {
+    height: 20px;
 }
 
 div.cashmusic.soundplayer.playlist.position {
