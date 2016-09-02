@@ -42,7 +42,7 @@ layout: default
 
   <div class="cards">
     {% for album in site.albums %}
-    {% if album.url == page.url = nil %}
+    {% if album.url == page.url %}
     {% else %}
     {% include cards.html %}
     {% endif %}
