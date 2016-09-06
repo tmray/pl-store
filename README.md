@@ -1,2 +1,2 @@
 # pl-store
-Store Protoype
+Store Prototype
