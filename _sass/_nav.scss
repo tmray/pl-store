@@ -184,6 +184,12 @@ header.navigation {
         margin-right: $navigation-submenu-padding;
       }
 
+      // &:after {
+      //   content: '›';
+      //   font-size: 1.2em;
+      //   position: absolute;
+      //   right: $navigation-submenu-padding / 2;
+      // }
     }
 
     &:focus > .submenu,

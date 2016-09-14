@@ -21,7 +21,7 @@
   $grid-item-columns: 6;
   $grid-item-big-columns: 8;
   $grid-item-color: white;
-  $grid-item-height: 93em;
+  $grid-item-height: 90em;
 
   @include clearfix;
 
@@ -31,6 +31,7 @@
     border-left: ($grid-item-border-size / 2) solid $grid-items-background;
     border-right: ($grid-item-border-size / 2) solid $grid-items-background;
     border-top: 0;
+    // cursor: pointer;
     float: left;
     height: $grid-item-height;
     outline: none;
@@ -88,6 +89,9 @@
     line-height: 1.5em;
     margin: auto;
 
+    // @include media($medium-screen) {
+    //   max-width: 70%;
+    // }
   }
 
   .grid-item li {
@@ -111,6 +115,22 @@
     }
   }
 
+  // .grid-item-image {
+  //   //background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  //   background-color: $grid-item-background;
+  //   &.seven-ways {
+  //     background: lightseagreen;
+  //     background-position: top;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //   }
+  //   &.best-work {
+  //     background: lightslategray;
+  //     background-position: top;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //   }
+  // }
 }
 .grid-items .grid-item.dvd-box {
   height: 55em;
