@@ -5,26 +5,40 @@ $parallax-background-height: $parallax-window-height * 2;
   max-height: $parallax-window-height;
   overflow: hidden;
   position: relative;
+  margin-top: 25px;
   text-align: center;
   width: 100%;
 }
 
 .parallax-static-content {
-  color: #9A9A8A;
+  color: #fff;
   padding: 8em 0;
   position: relative;
   z-index: 9;
+
+  @include media(min-width 320px max-width 480px, 6) {
+     padding-top: 0em !important;
+
+     h3 {
+       @include outer-container(75%);
+       line-height: 44px;
+     }
+   }
 }
 
 .parallax-background {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+      ),
+      url("../public/images/p-on-stage.jpg") repeat;
   background-position: top;
   background-size: cover;
   background-color: beige;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
-  top: - $parallax-window-height / 3;
+  top: - $parallax-window-height / 1.6;
   width: 100%;
 }
 
@@ -33,4 +47,9 @@ $parallax-background-height: $parallax-window-height * 2;
   @include outer-container;
   padding-top: 5em;
   padding-bottom: 5em;
+
+  p {
+    width: 60%;
+    margin: 0 auto;
+  }
 }

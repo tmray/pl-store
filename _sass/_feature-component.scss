@@ -6,7 +6,7 @@
   $base-font-color: $dark-gray !default;
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
-  $side-image-content-background: #F9F9F9;
+  $side-image-content-background: $light-purple;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
   background: $side-image-content-background;
@@ -16,7 +16,7 @@
   }
 
   .images-wrapper {
-    
+    @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;
@@ -46,7 +46,7 @@
     }
 
     h4 {
-      background: #BBB;
+      background: $purple;
       color: white;
       display: inline-block;
       font-size: 0.75em;

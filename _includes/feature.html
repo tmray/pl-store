@@ -1,6 +1,6 @@
 <div class="side-image">
 
-    <div class="images-wrapper" style="background: url('{{page.img}}') center no-repeat;"></div>
+    <div class="images-wrapper" style="background: url('{{page.img | prepend: site.baseurl }}') center no-repeat;background-size: cover;"></div>
     <div class="side-image-content">
       <h4>{{page.category}}</h4>
       <h1>{{page.title}}</h1>

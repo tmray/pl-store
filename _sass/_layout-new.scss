@@ -1,3 +1,21 @@
+//body
+body {
+  background-color: #ca7c5d !important;
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl {
+  font-family: 'Open Sans', sans-serif;
+}
+.page-content {
+  @include outer-container(980px);
+  background-color: #D1D6F3;
+}
+.cm-wrapper {
+  background: url(../public/images/panoramic_fullbg.png);
+  background-size: cover;
+}
 // Home
 .home,
 .home-bundle {
@@ -8,8 +26,15 @@
   }
 }
 .home-albums,
-.other-albums {
+.other-albums,
+.home-dvd,
+.home-discs,
+.home-bundle {
   @include outer-container;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+
   .cards {
     margin-left: -1em;
     margin-right: -1em;
@@ -24,11 +49,14 @@ section {
     @include span-columns(12);
   }
 }
-.player,
-.album-desc {
-  @include span-columns(6 of 12);
-  @include pad(20px);
-  @include media(min-width 320px max-width 480px) {
-    @include span-columns(12);
+// player on album pages
+.album-page {
+  .player,
+  .album-desc {
+    @include span-columns(6 of 12);
+    @include pad(20px);
+    @include media(min-width 320px max-width 480px) {
+      @include span-columns(12);
+    }
   }
 }

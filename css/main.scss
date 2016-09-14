@@ -3,79 +3,65 @@
 ---
 @charset "utf-8";
 
-// dev fonts
-@font-face {
-    font-family: "Redacted";
-    src: url("../public/fonts/Redacted-Font-old-sources/fonts/web/redacted-regular.eot");
-    src: url("../public/fonts/Redacted-Font-old-sources/fonts/web/redacted-regular.woff2") format("woff2"),
-         url("../public/fonts/Redacted-Font-old-sources/fonts/web/redacted-regular.woff") format("woff"),
-         url("../public/fonts/Redacted-Font-old-sources/fonts/web/redacted-regular.otf") format("opentype"),
-         url("../public/fonts/Redacted-Font-old-sources/fonts/web/redacted-regular.svg#filename") format("svg");
-}
-
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    100%;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "../bower_components/bourbon/app/assets/stylesheets/bourbon",
-        "../bower_components/neat/app/assets/stylesheets/_neat.scss",
-        // "base",
+        "../bower_components/neat/app/assets/stylesheets/neat.scss",
         "layout-new",
-        // "syntax-highlighting",
-        "feature-component",
+        "variables",
         "nav",
         "header",
+        "page-header",
+        "subnav",
         "cards",
         "parallax",
         "footer",
-        "player"
+        "player",
+        "grid-items"
 ;
 
 body {
   margin: 0;
+  color: #333;
+  font-family: $helvetica;
+  background: #eee;
 }
+$action-color: orange;
+$base-border-radius: 4px;
+$base-spacing: 10px;
+#{$all-buttons} {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: $base-spacing;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 
-// dev font
-// p,
-// .footer-links li {
-//   font-family: "Redacted";
-//   color: #444;
-// }
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+}
+button a {
+  color: #fff;
+  text-decoration: none;
+}

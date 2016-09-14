@@ -3,7 +3,7 @@ layout: default
 ---
 <section>
 
-  <article class="post">
+  <article class="post album-page">
 
     <div class="post-content album">
       {{ content }}
@@ -11,12 +11,12 @@ layout: default
     <div class="player">
       <div class="cashmusic soundplayer playlist"
         data-playlist='{
-          "id":"player1",
-          "artist":"Artist name",
+          "id":"{{page.category}}",
+          "artist":"Peter Leidy",
           "album":"Album title",
           "tracks":[
-            {"id":"unique1","title":"Song title 1","url":"path/to/song1.mp3"},
-            {"id":"unique2","title":"Song title 2","url":"path/to/song2.mp3"}
+            {"id":"unique1","title":"{{page.track1}}","url":"{{site.baseurl}}{{page.stream1}}"},
+            {"id":"unique2","title":"{{page.track2}}","url":"{{site.baseurl}}{{page.stream2}}"}
           ]
         }'
       ></div>
@@ -41,8 +41,11 @@ layout: default
   <h1 class="page-heading">Albums</h1>
 
   <div class="cards">
-    {% for page in site.albums %}
+    {% for album in site.albums %}
+    {% if album.url == page.url %}
+    {% else %}
     {% include cards.html %}
+    {% endif %}
     {% endfor %}
   </div>
 </div>
