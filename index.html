@@ -2,59 +2,48 @@
 layout: default
 ---
 
-<div id="album-downloads" class="page-header page-title">
-  <h1>Store</h1>
+<div class="home">
+
+  {% for page in site.albums limit:1 %}
+  <a href="{{page.url | prepend: site.baseurl }}">
+
+    {% include feature.html display='none' %}
+
+  </a>
+  {% endfor %}
+
 </div>
 
 <div class="home-albums">
 
-  <!-- cd cart -->
-  <script src="https://cashmusic.org/public/cashmusic.js" data-element="10299"></script>
-
-</div>
-
-<div id="bundles" class="section-header page-title">
-
-  <h1 class="page-heading">Bundles</h1>
-
-</div>
-
-<div class="home-bundle">
+  <h1 class="page-heading">Albums</h1>
 
   <div class="cards">
-
-    <div class="card">
-      <div class="card-copy" style="text-align: center;">
-
-        <h1 style="line-height: 1.2em; color: #4f2614;"><i>Have you heard about my Special Bundle Pricing!?</i></h1>
-        <h2 style="line-height: 1.2em; color: #4f2614;"><i>All 5 CDs and both DVDs just $100!! You can order these as digital downloads or physical copies that I can ship the old fashioned way, right to your doorstep!</i></h2>
-        <h2>“How do I get these!??”</h2>
-        <h2>So easy. Order right here!!</h2>
-        <img class="desktop-arrow" src="{{site.baseurl}}/public/images/arrow_right.png" alt="Order right here!!">
-        <h2 style="line-height: 1.2em; color: #0091BA;">
-          Just $100 US Dollars (plus shipping if you order physical copies)
-        </h2>
-
-      </div>
-    </div>
-
-    {% for album in site.bundles %}
+    {% for page in site.albums %}
     {% include cards.html %}
     {% endfor %}
-
   </div>
 
 </div>
 
 <div id="js-parallax-window" class="parallax-window">
   <div class="parallax-static-content">
-    <h2>Peter Leidy</h2>
+    <b>Info</b>
     <p>
-      Many valued customers find my CD’s are appropriate for Columbus Day, Yom Kippur, Canadian Thanksgiving, National Boss Day, (Eid) al Fitr, United Nations Day, the end of Daylight Savings Time, Halloween, All Saints Day, Day of the Dead, many people’s birthdays, Veterans Day, American Thanksgiving, and other Fall and Winter gift-giving holidays.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <h3>
-      Schedule your workshop today <button type="button" name="button"><a href="http://peterleidy.com/direct-support-professionals/contact/">Get Started</a></button> ... and like my <button type="button" name="button"><a href="https://www.facebook.com/PeterLeidyConsultationWorkshopsKeynotesSinging">Facebook Page</a></button> will ya?
-    </h3>
   </div>
   <div id="js-parallax-background" class="parallax-background"></div>
+</div>
+
+<div class="home-bundle">
+
+  {% for page in site.bundles limit:1 %}
+  <a href="{{page.url | prepend: site.baseurl }}">
+
+    {% include feature.html %}
+
+  </a>
+  {% endfor %}
+
 </div>

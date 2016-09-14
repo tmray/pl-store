@@ -1,31 +1,15 @@
-  <div class="card {% if album.url == page.url %}none{% endif %}">
-
+  <div class="card">
+    <a href="{{page.url | prepend: site.baseurl }}">
+      <div class="card-image">
+        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+      </div>
+      <div class="card-header">
+        {{page.title}}
+      </div>
       <div class="card-copy">
         <p>
-          <script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','{{album.cart}}');</script>
-        </p>
-        <p>
-          {{album.summary}}
-        </p>
-        {% if album.category == "album" %}
-        <p>
-          <div class="player">
-
-            <p>
-              <ol>
-                {% for tracks in album.tracks %}
-                <li>
-                  {{ album.tracks[forloop.index0] }}
-                </li>
-                {% endfor %}
-
-              </ol>
-            </p>
-
-          </div>
-          {% else | null %}
-          {% endif %}
+          {{page.summary}}
         </p>
       </div>
-    <!-- </a> -->
+    </a>
   </div>

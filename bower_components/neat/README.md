@@ -4,9 +4,9 @@
 [![Gitter](http://img.shields.io/badge/gitter-neat-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/neat)
 [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-neat-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/neat)
 
-## A lightweight, semantic grid framework
+## A lightweight, semantic grid framework built with Bourbon
 
-Neat is a fluid grid framework with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
+Neat is a fluid grid framework built with [Bourbon](https://github.com/thoughtbot/bourbon) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
 - **[Demo](http://neat.bourbon.io)**
 - **[Documentation](http://thoughtbot.github.io/neat-docs/latest)**
@@ -19,6 +19,7 @@ for updates.
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
+- [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
 - :warning: If you need **Sass 3.2 support**, you should [use Neat 1.5.1](#installing-older-versions-of-neat)
 
 ## Installation
@@ -38,16 +39,23 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   ```bash
   gem install sass # or gem update sass
   ```
+  ```bash
+  gem install bourbon # or gem update bourbon
+  ```
 
 3. Install the Neat library into the current directory:
 
   ```bash
+  bourbon install # if not already installed
+  ```
+  ```bash
   neat install
   ```
 
-4. Import Neat in your stylesheet:
+4. Import Neat in your stylesheet, after Bourbon:
 
   ```scss
+  @import "bourbon/bourbon";
   @import "neat/neat";
   ```
 
@@ -73,9 +81,10 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   bundle update sass
   ```
 
-3.  Import Neat in your `application.scss`:
+3.  Import Neat in your `application.scss`, after Bourbon:
 
   ```scss
+  @import "bourbon";
   @import "neat";
   ```
 
@@ -89,11 +98,12 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   npm install --save bourbon-neat
   ```
 
-1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Neat to your node-sass `includePaths` option. `require("bourbon-neat").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project.
+1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Bourbon and Neat to your node-sass `includePaths` option. `require("bourbon-neat").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project. You will also need to ensure that Bourbon is in the `includePaths` passed to node-sass.
 
-1. Import Neat into your Sass files:
+1. Import Neat into your Sass files, after Bourbon:
 
   ```scss
+  @import "bourbon";
   @import "neat";
   ```
 
@@ -118,6 +128,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 First off, if you are planning to override the default grid settings (12 columns), it is recommended to create a `_grid-settings.scss` file for that purpose. Make sure to import it right *before* importing Neat:
 
 ```scss
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
 @import "neat/neat"; // or "neat" when in Rails
 ```
