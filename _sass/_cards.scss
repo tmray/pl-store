@@ -26,8 +26,6 @@
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  // box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  // cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
 
@@ -80,7 +78,7 @@
       background-color: $card-background;
     }
   }
-  
+
   // bundle arrow
   .desktop-arrow {
     height: 55px;
@@ -96,6 +94,3 @@ a .side-image {
   text-decoration: none !important;
   color: #333;
 }
-
-// hide card
-// .card.none {display: none;}

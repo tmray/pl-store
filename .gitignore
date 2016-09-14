@@ -1,6 +1,8 @@
 _site
 .sass-cache
 .jekyll-metadata
+s3_website.yml
+CNAME
 
 # Files
 public/albums
